@@ -1,0 +1,186 @@
+/* 한글 깨지지 않도록 utf-8 charset을 설정 */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+
+body{
+    font-family: Tahoma, "Malgun Gothic", Geneva, Verdana, sans-serif;
+}
+h1,h3{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+}
+/* HEADER */
+.header_top, .header_title, .s1, .s3_cont{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+} 
+header {
+    height: 500px;
+    background-color: #000;
+    background-image: url('../img/header_bg2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.header_top {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.top_logo {}
+.top_logo a {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    text-shadow: 1px 1px 10px #fff;
+}
+.top_logo span{
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+}
+
+.top_menu {}
+.top_menu ul {}
+.top_menu li {
+    float: left;
+    margin-left: 25px;
+    color: #fff;
+    text-shadow: 1px 1px 5px #000;
+}
+.top_menu a {
+    font-size: 14px;
+}
+
+.header_title{
+    text-shadow: 0px 0px 20px #fff;
+    /* padding-left: 50px; */
+    padding-top: 80px;
+}
+.header_title h2{
+    font-family: 'Dosis', sans-serif;
+    font-size: 72px;
+}
+.header_title p{
+    /* color: #fff; */
+}
+
+.gnb{
+    height: 50px;
+    background: linear-gradient(to right, #689 0%, #ffe 50%, #c99 100%);
+    text-align: center;
+}
+.gnb > div{}
+.gnb ul{
+    overflow: hidden;
+    display: inline-block;
+}
+.gnb li {
+    float: left;
+}
+.gnb li a{ 
+    display: inline-block;
+    margin: 0 30px;
+    line-height: 50px;
+    color: #777;
+}
+li.active a, .gnb li:hover a{
+    color: #000;
+}
+li.active a::after, .gnb li:hover a::after{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #f00;
+    margin-top: -5px;
+}
+
+/* contents */
+section {}
+.s1 {
+    display: flex;
+    margin: 110px auto;
+    flex-wrap: wrap;
+}
+.s1 > h3 {
+    width: 100%;
+    font-size: 36px;
+}
+.s1 > h3 span{
+    text-decoration: underline;
+}
+.s1 > div {
+    flex: 1;
+    text-align: center;
+    margin-top: 40px;
+}
+.s1_txt{
+    padding-top: 10px;
+}
+.s1_txt strong{}
+.s1_txt span{
+    font-size: 14px;
+    color: #555;
+}
+
+.s2 { 
+    background:linear-gradient(to right ,#333 -10%, #eee 50%, #333 110%);
+    padding:60px;
+  }
+  .s2 > div { text-align:center;}
+  .s2_icons { 
+    display:inline-block;
+  }
+  .s2_icons li {      
+      display:inline-block;
+      margin:0 20px;
+  }
+  .s2_icons a { display:block; }
+  .s2_icons a:hover p{
+      text-decoration: underline;
+  }
+  .s2_icons a img { width:80px; }
+  .s2_icons a p { 
+    margin-top:10px;
+    font-family: 'Dosis', sans-serif;
+}
+  
+    .s3 { 
+      margin:110px auto; 
+    }
+    .s3_title { text-align:center;}
+    .s3_title p { 
+      font-size:14px;
+      color:#858585;
+    }
+    .s3_title h3 {
+      font-size:22px;
+      margin-top:10px;
+    }
+    .s3_title h3:after {
+      display:block; content:'';
+      position:absolute; left: calc(50% - 40px);     
+      width:80px; height:5px;
+      background:#ff5a00;
+      margin-top:0px;
+    }
+  
+    .s3_cont {
+      padding:0 10px;
+      display:flex;
+    }
+    .s3_cont > div {
+    }
+  
+    .s3_cont > div:nth-child(2){
+      margin:0 20px;
+    }
+    .s3_cont > div:nth-child(2) img:nth-child(1) {
+      margin-bottom:20px;
+    }
+    .s3_cont > div:last-child{
+      
+    }
+  
+  
