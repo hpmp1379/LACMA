@@ -2,9 +2,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
 
-body{
-    font-family: Tahoma, "Malgun Gothic", Geneva, Verdana, sans-serif;
-}
+body{font-family: Tahoma, "Malgun Gothic", Geneva, Verdana, sans-serif;}
 h1,h2,h3,h4,h5{
     font-family: 'Dosis', sans-serif;
     font-weight: 600;
@@ -12,12 +10,15 @@ h1,h2,h3,h4,h5{
 h3{font-size: 36px;}
 h4{font-size: 24px;}
 h5{font-size: 18px;}
-/* HEADER */
-.header_top, .header_title, .s1, .s3_cont, .s4, .footer_in, .footer_out{
+
+.header_top, .header_title, 
+.s1, .s3_cont, .s4, 
+.footer_in, .footer_out{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-} 
+}
+
 header {
     height: 500px;
     background-color: #000;
@@ -85,22 +86,29 @@ header {
 .gnb li {
     float: left;
 }
-.gnb li a{ 
+.gnb li a{
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
     display: inline-block;
-    margin: 0 30px;
+    margin: 0 50px;
     line-height: 50px;
-    color: #777;
+    color: #333;
+    transition: all 1s;
 }
-li.active a, .gnb li:hover a{
+.gnb li:hover a{
     color: #000;
 }
-li.active a::after, .gnb li:hover a::after{
+.gnb li a::after {
     content:'';
     display: block;
-    width: 100%;
+    width: 0%;
     height: 5px;
-    background: #f00;
     margin-top: -5px;
+    transition: all 0.5s;
+}
+.gnb li:hover a::after{
+    width: 100%;
+    background: #f00;
 }
 
 /* contents */
@@ -160,7 +168,7 @@ section {}
 }
 
 .s3 { 
-    margin:80px auto; 
+    margin:80px 0; 
 }
 .s3_title { text-align:center;}
 .s3_title p { 
@@ -186,14 +194,24 @@ section {}
 .s3_cont > div {
 }
 .s3_cont .article{
+    transition: box-shadow 0.3s;
     position: relative;
+}
+.s3_cont .article:nth-of-type(3){
+/*     ! margin-top: 40px; */
 }
 .s3_cont .article:hover .texts{
     color: #fff;
 }
+.s3_cont .article:hover{
+    box-shadow: 0 0 10px #999;
+}
+.s3 img{
+    position: relative;
+}
 .s3 .texts {
     position: absolute;
-    bottom: 50px;
+    bottom: 10px;
     left: 10px;
     transition: color 0.3s;
     color: transparent;
@@ -201,11 +219,11 @@ section {}
 .s3_cont > div:nth-child(2){
     margin:0 20px;
 }
-.s3_cont > div:nth-child(2) img:nth-child(1) {
-margin-bottom: 40px;
+.s3_cont > div:nth-child(2) > .article:nth-of-type(2){
+    margin-top: 40px;
 }
 .s3_cont > div:last-child{
-padding: 60px 10px;
+    padding: 60px 10px;
 }
 .s3_cont > div:last-child h4{
     margin-bottom: 10px;
@@ -216,7 +234,7 @@ padding: 60px 10px;
     line-height: 1.4;
 }
 .more{
-    color: #aaa;
+    color: #555;
     font-size: 14px;
 }
 .more:hover{
@@ -229,9 +247,15 @@ padding: 60px 10px;
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: #111;
+    background: #999;
     border-radius: 50%;
     text-align: center;
+    margin-right: 5px;
+    transition: all 0.3s;
+}
+.sns a:hover{
+    color: #000;
+    background:#111;
 }
 .sns i {
     color: #fff;
@@ -256,6 +280,11 @@ padding: 60px 10px;
 }
 .s4 img {
     width: 180px;
+    transition: all 0.3s;
+}
+.s4 img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #555;
 }
 
 footer{
